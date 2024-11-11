@@ -26,7 +26,7 @@ header {
     top: 0;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    height: 150px; /* Slightly bigger header height */
+    height: 120px; /* Slightly bigger header height */
 }
 
 /* Profile Image */
@@ -103,36 +103,38 @@ ul li::before {
 li {
     margin-bottom: 0.5em;
 }
-/* Timeline Styling */
+/* Timeline Container */
 .timeline {
     position: relative;
-    padding-left: 2em; /* Space for the line */
+    padding-left: 2em; /* Space for the timeline line */
     margin-top: 2em;
 }
 
+/* Vertical Line on the Left */
 .timeline::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
+    left: 1em; /* Position the line closer to the left margin */
     bottom: 0;
     width: 4px;
     background-color: #4CAF50; /* Line color */
     border-radius: 2px;
 }
 
+/* Individual Timeline Items */
 .timeline-item {
     position: relative;
-    padding: 1em 2em;
+    padding-left: 3em; /* Padding to keep content away from the line */
     margin-bottom: 2em;
-    margin-left: 2em; /* Aligns content to the right of the line */
 }
 
+/* Bullet Point for Each Item */
 .timeline-item::before {
     content: '';
     position: absolute;
-    top: 1em;
-    left: -1.5em;
+    top: 1em; /* Aligns the bullet vertically with the content */
+    left: 0.5em; /* Positions the bullet on the line */
     width: 12px;
     height: 12px;
     background-color: #4CAF50;
@@ -140,6 +142,7 @@ li {
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Date Styling */
 .date {
     display: block;
     font-size: 0.9em;
@@ -148,6 +151,7 @@ li {
     font-weight: bold;
 }
 
+/* Content Styling */
 .content {
     background-color: #fff;
     padding: 1em;
@@ -155,46 +159,13 @@ li {
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* Responsive styling for mobile */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .timeline {
         padding-left: 1.5em;
     }
     .timeline-item {
-        padding-left: 1em;
-        margin-left: 1em;
+        padding-left: 2em;
     }
 }
 
-/* Link Styling */
-a {
-    color: #4CAF50;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-        padding: 1em;
-    }
-
-    header img {
-        margin: 10px 0;
-    }
-
-    section {
-        padding: 1em;
-    }
-}
