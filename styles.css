@@ -1,4 +1,4 @@
-/* Global Style Reset */
+/* Reset and Global Styling */
 * {
     margin: 0;
     padding: 0;
@@ -10,34 +10,34 @@ body {
     color: #333;
     background-color: #f4f7f8;
     line-height: 1.6;
-    padding-top: 60px;
+    padding-top: 100px; /* To accommodate the fixed header */
 }
 
-/* Header */
+/* Header Styling */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(255, 255, 255, 0.3); /* Blurred white overlay */
-    backdrop-filter: blur(8px);
-    padding: 2em;
+    background: rgba(255, 255, 255, 0.8); /* Light, semi-transparent background */
+    backdrop-filter: blur(10px); /* Blurs background */
+    padding: 1em 2em;
     position: fixed;
     width: 100%;
     top: 0;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
 header h1 {
-    font-size: 2em;
-    color: #444;
+    font-size: 1.8em;
+    color: #333;
     font-weight: 700;
     margin-bottom: 0.2em;
 }
 
 header p {
-    font-size: 1.1em;
-    color: #777;
+    font-size: 1em;
+    color: #555;
 }
 
 header .info-container {
@@ -47,27 +47,27 @@ header .info-container {
 }
 
 header img {
-    width: 120px; /* Profile image size */
-    height: 120px;
+    width: 100px; /* Adjusts profile image size */
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
     margin-left: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Section Styling */
 section {
     max-width: 800px;
     margin: 2em auto;
-    background-color: white;
+    background-color: #fff;
     border-radius: 8px;
     padding: 1.5em;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s;
+    transition: transform 0.2s ease-in-out;
 }
 
 section:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Subtle lift effect on hover */
 }
 
 section h2 {
@@ -85,6 +85,12 @@ section ul {
 
 ul {
     list-style-type: none;
+    padding-left: 1em;
+}
+
+ul li::before {
+    content: "• "; /* Bullet styling */
+    color: #4CAF50;
 }
 
 li {
@@ -107,16 +113,16 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Mobile Responsiveness */
+/* Responsive Styling */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        align-items: center;
         text-align: center;
+        padding: 1em;
     }
 
     header img {
-        margin: 20px 0;
+        margin: 10px 0;
     }
 
     section {
