@@ -101,56 +101,102 @@ li {
 }
 /* Timeline Styling */
 .timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5em;
     position: relative;
-    padding-left: 2em;
+    padding: 2em 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background-color: #ccc;
+    transform: translateX(-50%);
 }
 
 .timeline-item {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 1em;
     position: relative;
+    width: 50%;
+    padding: 1em 2em;
+    margin-bottom: 2em;
+}
+
+.timeline-item.left {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item.right {
+    left: 50%;
 }
 
 .timeline-item::before {
     content: '';
     position: absolute;
-    left: 0.5em;
-    top: 0.2em;
-    width: 10px;
-    height: 10px;
+    top: 1em;
+    width: 16px;
+    height: 16px;
     background-color: #4CAF50;
     border-radius: 50%;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
 }
 
-.timeline::after {
-    content: '';
-    position: absolute;
-    left: 0.9em;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: #ccc;
+.timeline-item.left::before {
+    right: -8px;
+}
+
+.timeline-item.right::before {
+    left: -8px;
 }
 
 .date {
-    font-weight: bold;
+    display: block;
+    font-size: 0.9em;
     color: #555;
-    min-width: 120px;
+    margin-bottom: 0.5em;
+    font-weight: bold;
 }
 
-.timeline-item p {
-    margin: 0;
-    font-size: 1em;
-    color: #666;
+.content {
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.timeline-item p strong {
-    color: #333;
+.timeline-item.left .content {
+    margin-right: auto;
+    text-align: left;
+}
+
+.timeline-item.right .content {
+    margin-left: auto;
+    text-align: left;
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 10%;
+    }
+
+    .timeline-item {
+        width: 90%;
+        left: 10%;
+        text-align: left;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        left: 0;
+    }
+
+    .timeline-item.left .content,
+    .timeline-item.right .content {
+        margin: 0;
+    }
 }
 
 /* Link Styling */
