@@ -17,44 +17,51 @@ body {
 header {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centers the text container horizontally */
-    background: rgba(255, 255, 255, 0.8); /* Light, semi-transparent background */
-    backdrop-filter: blur(10px); /* Blurs background */
-    padding: 0.5em 1.5em;
+    justify-content: flex-start; /* Aligns items to the left */
+    background: rgba(255, 255, 255, 0.9); /* Slightly opaque background */
+    backdrop-filter: blur(10px);
+    padding: 1em 2em; /* Increased padding for a slightly bigger header */
     position: fixed;
     width: 100%;
     top: 0;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    height: 80px;
+    height: 100px; /* Slightly bigger header height */
 }
 
+/* Profile Image */
 header img {
-    width: 60px; /* Adjust as needed */
-    height: 60px;
-    border-radius: 50%; /* Circular image */
+    width: 80px; /* Profile image size */
+    height: 80px;
+    border-radius: 50%;
     object-fit: cover;
-    margin-right: 20px; /* Spacing between the image and text */
+    margin-right: 20px; /* Space between image and text */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 
+/* Info Container */
 .info-container {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
     max-width: 70%;
 }
 
+/* Header Text Styling */
 header h1 {
-    font-size: 1.5em;
+    font-size: 1.6em; /* Slightly larger font size */
     color: #333;
     font-weight: 700;
     margin: 0;
 }
 
 header p {
-    font-size: 0.9em;
+    font-size: 1em;
     color: #555;
     margin-top: 0.2em;
 }
+
 
 /* Profile Image */
 header img {
