@@ -511,6 +511,8 @@ body {
 .timeline-content {
     position: relative;
     z-index: 3; /* Cards are on top */
+    list-style: none;
+    
 }
 
 .timeline-date {
@@ -533,6 +535,7 @@ body {
     border: 1px solid var(--gray-200);
     position: relative; /* Ensure cards stay on top */
     z-index: 4; /* Above everything else in timeline */
+    list-style: none;
 }
 
 .card:hover {
