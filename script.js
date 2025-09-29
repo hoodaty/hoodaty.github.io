@@ -532,3 +532,94 @@ if (typeof module !== 'undefined' && module.exports) {
         throttle
     };
 }
+// Visitor Counter with Country Detection
+class VisitorCounter {
+    constructor() {
+        this.storageKey = 'visitor-count';
+        this.lastVisitKey = 'last-visit';
+        this.init();
+    }
+
+    async init() {
+        await this.detectCountry();
+        this.updateVisitorCount();
+    }
+
+    async detectCountry() {
+        try {
+            // Using ipapi.co for geolocation (free tier available)
+            const response = await fetch('https://ipapi.co/json/');
+            const data = await response.json();
+            
+            if (data.country_code) {
+                this.updateCountryInfo(data.country_code, data.country_name);
+            }
+        } catch (error) {
+            console.log('Could not detect country:', error);
+            // Fallback - show world icon
+            this.updateCountryInfo('WORLD', 'Unknown');
+        }
+    }
+
+    updateCountryInfo(countryCode, countryName) {
+        const flagElement = document.getElementById('country-flag');
+        const nameElement = document.getElementById('country-name');
+        
+        if (flagElement && nameElement) {
+            if (countryCode === 'WORLD') {
+                flagElement.textContent = '🌍';
+                nameElement.textContent = 'Global Visitor';
+            } else {
+                // Convert country code to flag emoji
+                const flag = this.getCountryFlag(countryCode);
+                flagElement.textContent = flag;
+                nameElement.textContent = countryName;
+            }
+        }
+    }
+
+    getCountryFlag(countryCode) {
+        // Convert country code to flag emoji
+        const codePoints = countryCode
+            .toUpperCase()
+            .split('')
+            .map(char => 127397 + char.charCodeAt());
+        return String.fromCodePoint(...codePoints);
+    }
+
+    updateVisitorCount() {
+        const now = Date.now();
+        const lastVisit = localStorage.getItem(this.lastVisitKey);
+        const currentCount = parseInt(localStorage.getItem(this.storageKey) || '0');
+        
+        // Only count as new visit if last visit was more than 1 hour ago
+        const oneHour = 60 * 60 * 1000;
+        if (!lastVisit || (now - parseInt(lastVisit)) > oneHour) {
+            const newCount = currentCount + 1;
+            localStorage.setItem(this.storageKey, newCount.toString());
+            localStorage.setItem(this.lastVisitKey, now.toString());
+            this.displayCount(newCount);
+        } else {
+            this.displayCount(currentCount);
+        }
+    }
+
+    displayCount(count) {
+        const countElement = document.getElementById('visit-count');
+        if (countElement) {
+            // Add animation
+            countElement.style.opacity = '0';
+            setTimeout(() => {
+                countElement.textContent = count.toLocaleString();
+                countElement.style.opacity = '1';
+            }, 200);
+        }
+    }
+}
+
+// Initialize visitor counter when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    // ... your existing code ...
+    new VisitorCounter();
+});
+
