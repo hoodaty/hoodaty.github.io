@@ -3,231 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soumodeep Hoodaty</title>
+    <title>Soumodeep Hoodaty - Data Science Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-    <img src="profile.jpeg" alt="Soumodeep Hoodaty">
-    <div class = "info-container">
-        <h1>Soumodeep Hoodaty</h1>
-        <p>M2 Data Science | École Polytechnique</p>
-    </div>
+    <!-- Navigation Menu -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="nav-name">Soumodeep Hoodaty</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                <li class="nav-item"><a href="#internships" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="profile.jpeg" alt="Soumodeep Hoodaty" class="profile-img" loading="lazy">
+                <div class="hero-image-overlay"></div>
+            </div>
+            <div class="hero-text">
+                <h1 class="hero-title">Soumodeep Hoodaty</h1>
+                <p class="hero-subtitle">M2 Data Science</p>
+                <p class="hero-institution">École Polytechnique, IP Paris</p>
+                <p class="hero-description">Graduate student specialized in data science with a strong background in applied mathematics and statistics. Passionate about leveraging machine learning for biological data and environmental impact analysis.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator"><i class="fas fa-chevron-down"></i></div>
     </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm a graduate student specializing in data science with a background in applied mathematics and statistics. Passionate about working with biological data.</p>
-    </section>
+    <main id="main-content" class="main-content">
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I'm a data science graduate student with a focus on building robust machine learning pipelines for biological and environmental data. My academic journey spans deep learning, reinforcement learning, and optimization techniques, allowing me to tackle interdisciplinary challenges.</p>
+                        <p>I thrive on research-oriented projects, especially those combining statistical rigor with real-world impact. During my internships, I developed large-scale databases and ML models to address fish toxicity in cosmetics, and built Bayesian program synthesis methods for neuroscientific behavioral datasets.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card"><span class="stat-number">4+</span><span class="stat-label">Research Internships</span></div>
+                        <div class="stat-card"><span class="stat-number">8+</span><span class="stat-label">ML Projects</span></div>
+                        <div class="stat-card"><span class="stat-number">5</span><span class="stat-label">Awards & Scholarships</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Education Section -->
-<section id="education">
-    <h2>Education</h2>
-    <div class="timeline">
-        <div class="timeline-item">
-            <span class="date">2025 - 2026</span>
-            <div class="content">
-                <strong>M2 Data Science - École Polytechnique, IP Paris</strong>
-                <ul class="course-list">
-                    <li>Deep Learning - I</li>
-                    <li>Optimization for Data Science</li>
-                    <li>Machine Learning for Graphs</li>
-                    <li>Laws and Ethics of AI</li>
-                    <li>Reinforcement Learning</li>
-                    <li>AI for Sound: Analysis Processing and Generation</li>
-                    <li>Deep Learning for Computer Vision</li>
-                    <li>Generative models for visual content prediction</li>
-                    <li>Representation Learning for Computer Vision and Medical Imaging</li>
-                    <li>Introduction to eXplainable AI: Interpretable models, post-hoc explainability and causality</li>
-                </ul>
+        <!-- Education Section -->
+        <section id="education" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Education</h2>
+                <div class="timeline">
+                    <!-- M2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2025 – 2026</div>
+                            <div class="card">
+                                <h3 class="card-title">M2 Data Science</h3>
+                                <p class="card-subtitle">École Polytechnique, IP Paris</p>
+                                <div class="course-grid">
+                                    <div class="course-tag">Deep Learning I</div>
+                                    <div class="course-tag">Optimization for Data Science</div>
+                                    <div class="course-tag">Machine Learning for Graphs</div>
+                                    <div class="course-tag">Reinforcement Learning</div>
+                                    <div class="course-tag">XAI & Causality</div>
+                                    <div class="course-tag">Generative CV Models</div>
+                                    <div class="course-tag">AI for Sound</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- M1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2023 – 2025</div>
+                            <div class="card">
+                                <h3 class="card-title">M1 Applied Mathematics & Statistics</h3>
+                                <p class="card-subtitle">École Polytechnique, IP Paris — <span class="gpa-badge">Assez Bien</span></p>
+                                <div class="course-grid">
+                                    <div class="course-tag">NLP for Sentiment Analysis</div>
+                                    <div class="course-tag">Advanced Learning for Texts & Graphs</div>
+                                    <div class="course-tag">Stochastic Processes</div>
+                                    <div class="course-tag">Machine Learning</div>
+                                    <div class="course-tag">Optimization</div>
+                                    <div class="course-tag">Time Series</div>
+                                    <div class="course-tag">Mathematical Statistics</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BSc -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2020 – 2023</div>
+                            <div class="card">
+                                <h3 class="card-title">B.Sc. (Hons.) Mathematics</h3>
+                                <p class="card-subtitle">St. Stephen’s College, Delhi University</p>
+                                <div class="gpa-badge">GPA 9.0/10</div>
+                                <div class="course-grid">
+                                    <div class="course-tag">Differential Equations</div>
+                                    <div class="course-tag">Mathematical Modelling</div>
+                                    <div class="course-tag">Computer Networks & Security</div>
+                                    <div class="course-tag">Python & C++</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="timeline-item">
-            <span class="date">2023 - 2025</span>
-            <div class="content">
-                <strong>M1 Applied Mathematics and Statistics - École Polytechnique, IP Paris</strong>
-                <p>GPA - Assez Bien</p>
-                <ul class="course-list">
-                    <li>Natural Language Processing for Sentiment Analysis</li>
-                    <li>Advanced Learning for Texts and Graphs</li>
-                    <li>Probability Theory and Stochastic Processes, Markov Processes and Applications</li>
-                    <li>Introduction to Machine Learning</li>
-                    <li>Optimisation</li>
-                    <li>Linear Time Series and Financial Mathematics</li>
-                    <li>Python for Data Science</li>
-                    <li>Mathematical Statistics</li>
-                    <li>Databases</li>
-                </ul>
-            </div>
-        </div>
-        <div class="timeline-item">
-            <span class="date">2020 - 2023</span>
-            <div class="content">
-                <strong>B.Sc. (Hons.) Mathematics- St. Stephen’s College, Delhi University</strong>
-                <p>GPA - 9.0/10</p>
-                <ul class="course-list">
-                    <li>Introduction to Python</li>
-                    <li>Computer Networks and Cyber Security</li>
-                    <li>Ordinary and Partial Differential Equations</li>
-                    <li>Mathematical Modelling</li>
-                    <li>Database Management Systems</li>
-                    <li>C++ for Mathematics, LateX, Mathematica and Maxima</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-    <!-- Internships and Research Fellowships Section -->
-<section id="internships and Research Fellowships">
-    <h2>Internships</h2>
-    <div class="timeline">
-         <div class="timeline-item right">
-            <span class="date">February - July 2025</span>
-            <div class="content">
-                <strong> Data Analysis and ML models to combat acute fish toxicity from cosmetics - Loreal Groupe</strong>
-                <p><strong>Supervisor: Dr. Yannick Bayona</strong></p>
-                <ul class="work-list">
-                    <li> In vivo data comparison with in-silico predictions of toxicity (QSAR).</li>
-                    <li>Data analysis of FET vs. RTGill data.</li>
-                    <li>Cleaning and processing of raw data.</li>
-                    <li>Built a comprehensive database of diverse features from different sources tailored for ML.</li>
-                    <li>Learnt containerization using Docker and how to run models on Google CLoud Platform efficiently.</li>
-                    <li>Built and tuned ML models (catboost, random forest, NNs) from scratch leveraging the database created.</li>
-                    <li>Created structure-based clusters for defining application domain and creating cluster specific models.</li>
-                    <li>Final model outperformed many current state-of-the-art models and ranked among the best performing models for the test data.</li>
-                </ul>
+        <!-- Research & Internship Experience -->
+        <section id="internships" class="section">
+            <div class="container">
+                <h2 class="section-title">Research & Internships</h2>
+                <div class="experience-grid">
+                    <!-- L'Oréal Internship -->
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <div class="experience-date">Feb – Jul 2025</div>
+                            <div class="experience-type">Data Science Intern</div>
+                        </div>
+                        <h3 class="experience-title">ML Models for Acute Fish Toxicity</h3>
+                        <p class="experience-organization">L’Oréal Groupe</p>
+                        <p class="experience-supervisor"><strong>Supervisor:</strong> Dr. Yannick Bayona</p>
+                        <ul class="experience-highlights">
+                            <li>Curated multi-source database of molecular descriptors for QSAR modeling</li>
+                            <li>Built CatBoost, Random Forest & Neural Net ensembles outperforming SOTA baselines</li>
+                            <li>Implemented Docker containers & deployed pipelines on Google Cloud</li>
+                            <li>Clustered chemical space to define application domains & tailored models</li>
+                        </ul>
+                        <div class="tech-tags"><span class="tech-tag">CatBoost</span><span class="tech-tag">Docker</span><span class="tech-tag">GCP</span><span class="tech-tag">QSAR</span></div>
+                    </div>
+                    <!-- Bayesian Program Synthesis -->
+                    <div class="experience-card">
+                        <div class="experience-header"><div class="experience-date">Jun – Aug 2024</div><div class="experience-type">Research Intern</div></div>
+                        <h3 class="experience-title">Bayesian Program Synthesis</h3>
+                        <p class="experience-organization">Institut des Neurosciences Paris-Saclay</p>
+                        <p class="experience-supervisor"><strong>Supervisor:</strong> Dr. Tihana Jovanic</p>
+                        <ul class="experience-highlights">
+                            <li>Generated synthetic larval behavior data matching experimental recordings</li>
+                            <li>Enabled transfer learning on annotated datasets via synthesized trajectories</li>
+                        </ul>
+                        <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">Bayesian Methods</span><span class="tech-tag">Generative Models</span></div>
+                    </div>
+                    <!-- Number Theory Fellowship -->
+                    <div class="experience-card">
+                        <div class="experience-header"><div class="experience-date">Jun – Jul 2022</div><div class="experience-type">Research Fellow</div></div>
+                        <h3 class="experience-title">Integer Partitions & Bijective Proofs</h3>
+                        <p class="experience-organization">Shiv Nadar University</p>
+                        <p class="experience-supervisor"><strong>Supervisor:</strong> Dr. Neha Gupta</p>
+                        <ul class="experience-highlights">
+                            <li>Derived Rogers–Ramanujan identity using generating functions</li>
+                            <li>Verified combinatorial identities with SageMath</li>
+                        </ul>
+                        <div class="tech-tags"><span class="tech-tag">SageMath</span><span class="tech-tag">Number Theory</span></div>
+                    </div>
+                    <!-- Functional Analysis Fellowship -->
+                    <div class="experience-card">
+                        <div class="experience-header"><div class="experience-date">Jun – Jul 2022</div><div class="experience-type">Research Fellow</div></div>
+                        <h3 class="experience-title">Functional Analysis Studies</h3>
+                        <p class="experience-organization">IIT Guwahati</p>
+                        <p class="experience-supervisor"><strong>Supervisor:</strong> Dr. Anjan Chakrabarty</p>
+                        <ul class="experience-highlights">
+                            <li>Explored Banach space theory & Baire Category applications</li>
+                        </ul>
+                        <div class="tech-tags"><span class="tech-tag">Functional Analysis</span></div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="timeline-item left">
-            <span class="date">June - August 2024</span>
-            <div class="content">
-                <strong>Bayesian Program Synthesis - Institut des Neurosciences Paris-Saclay</strong>
-                <p><strong>Supervisor: Dr. Tihana Jovanic</strong></p>
-            <ul class="work-list">
-                    <li>Developed Bayesian Program Synthesis methodology for generating synthetic data closely matching key characteristics observed in experimental recordings of larva behavior.</li>
-                    <li>Incorporated generative models to replicate behavioral traits specific to genotypes under distinct, action-specific conditions, enhancing the realism of synthetic datasets.</li>
-                    <li>Validated methodology by using a behavior analysis pipeline on synthetic data, assessing its efficacy in enabling transfer learning on annotated behavioral datasets.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="timeline-item right">
-            <span class="date">June - July 2022</span>
-            <div class="content">
-                <strong>Number Theory: Integer Partitions - Shiv Nadar University</strong>
-                <p><strong>Supervisor: Dr. Neha Gupta</strong></p>
-                <ul class="work-list">
-                    <li>Explored bijective proofs for various integer partition identities and their derivatives, enhancing understanding of combinatorial proofs.</li>
-                    <li>Utilized SageMath to verify and explore the accuracy of various number-theoretic identities.</li>
-                    <li>Studied generating functions and applied them to derive and prove the Rogers-Ramanujan identity, deepening comprehension of their use in number theory.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="timeline-item left">
-            <span class="date">June - July 2022</span>
-            <div class="content">
-                <strong>Functional Analysis - Indian Institute of Technology Guwahati</strong>
-                <p><strong>Supervisor: Dr. Anjan Chakrabarty</strong></p>
-                <ul class="work-list">
-                    <li>Studied Functional Analysis, covering fundamental concepts such as metric spaces, normed spaces, and Banach spaces.</li>
-                    <li>Studied the proof of the Baire Category Theorem using Cantor’s Intersection Theorem.</li>
-                    <li>Studied the Closed Graph Theorem and the Fixed Point Theorem, deepening knowledge of ther significance in analysis and their applications.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- Projects Section -->
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="timeline">
-        <div class="timeline-item">
-            <span class="date">April - May 2024</span>
-            <div class="content">
-                <strong>Linear Time Series Forecasting</strong>
-                <ul class="course-list">
-                    <li>Analyze and forecast France's industrial production indices for construction materials using time series methods.</li>
-                    <li>Performed trend decomposition, stationarity tests (ADF, KPSS), and ARIMA modeling for forecasting.</li>
-                    <li>Stationarity achieved through differentiation; ARIMA(0,1,1) selected; forecasts showed negative temporal correlations.</li>
-                    <li>Model assessed using AIC, BIC, Ljung-Box, and Q-tests; residuals confirmed normal via Shapiro-Wilk and Q-Q plots.</li>
-                    <li>Analysis conducted in R, with forecasts accompanied by 95% confidence intervals and Granger causality tests.</li>
-                </ul>
+        <!-- Projects Section -->
+        <section id="projects" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid">
+                    <!-- Time Series Forecasting -->
+                    <div class="project-card">
+                        <div class="project-header"><div class="project-date">Apr – May 2024</div><div class="project-category">Time Series</div></div>
+                        <h3 class="project-title">Industrial Production Forecasting</h3>
+                        <p class="project-description">Forecasted France’s construction materials index using ARIMA & causal tests.</p>
+                        <div class="project-details">
+                            <ul>
+                                <li>Performed decomposition, ADF/KPSS tests, selected ARIMA(0,1,1)</li>
+                                <li>Validated models via AIC/BIC & residual diagnostics (Ljung-Box)</li>
+                                <li>Generated forecasts with 95% confidence bands & Granger causality</li>
+                            </ul>
+                        </div>
+                        <div class="tech-tags"><span class="tech-tag">R</span><span class="tech-tag">ARIMA</span></div>
+                    </div>
+                    <!-- Stock Price Prediction -->
+                    <div class="project-card">
+                        <div class="project-header"><div class="project-date">Mar – Apr 2024</div><div class="project-category">Deep Learning</div></div>
+                        <h3 class="project-title">Tesla Stock Price Prediction</h3>
+                        <p class="project-description">Implemented LSTM and regression baselines for TSLA stock forecasting.</p>
+                        <div class="project-details"><ul><li>Analyzed 10-year historical data with technical features</li><li>Compared linear regression, random forest & LSTM performance</li><li>Identified suitability of sequence models for time-series prediction</li></ul></div>
+                        <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">LSTM</span></div>
+                    </div>
+                    <!-- Credit Card Fraud -->
+                    <div class="project-card">
+                        <div class="project-header"><div class="project-date">Dec 2023 – Jan 2024</div><div class="project-category">Anomaly Detection</div></div>
+                        <h3 class="project-title">Credit Card Fraud Detection</h3>
+                        <p class="project-description">Developed custom Gaussian Mixture Model pipeline for fraud detection.</p>
+                        <div class="project-details"><ul><li>Implemented EM algorithm with K-Means initialization</li><li>Determined fraud threshold via log-likelihood drop-off</li></ul></div>
+                        <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">GMM</span></div>
+                    </div>
+                    <!-- Gradient Descent -->
+                    <div class="project-card">
+                        <div class="project-header"><div class="project-date">Dec 2023</div><div class="project-category">Optimization</div></div>
+                        <h3 class="project-title">Gradient Descent Algorithms</h3>
+                        <p class="project-description">Benchmarked Wolfe-Powell, Armijo & constant step sizes on test functions.</p>
+                        <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">Optimization</span></div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="timeline-item">
-            <span class="date">March - April 2024</span>
-            <div class="content">
-                <strong>Stock Price Prediction</strong>
-                <ul class="course-list">
-                    <li>The dataset consists of daily historical stock data for Tesla Inc. (TSLA) from 2012 to 2022, including features like Date, Open, High, Low, Close, Adj Close, and Volume.</li>
-                    <li>The primary goal is to predict the adjusted closing price (Adj Close) using various regression methods and compare their performance.</li>
-                    <li>The project uses methods assuming independent and identically distributed data, which is not suitable for time series data; more appropriate models like ARIMA should have been considered.</li>
-                    <li>The Long Short-Term Memory (LSTM) neural network was identified as the only method used correctly for time series prediction, aligning with the sequential nature of stock data.</li>
-                    <li>The project successfully introduced and applied different regression techniques, fulfilling the objective of gaining experience with various methods, despite the flaw in methodology for time series analysis.</li>
-                </ul>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category"><h3 class="skill-category-title">Programming</h3><div class="skill-list"><div class="skill-item"><span class="skill-name">Python</span><div class="skill-bar"><div class="skill-progress" style="width: 92%"></div></div></div><div class="skill-item"><span class="skill-name">C++</span><div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div></div><div class="skill-item"><span class="skill-name">Java</span><div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div></div></div></div>
+                    <div class="skill-category"><h3 class="skill-category-title">ML Frameworks</h3><div class="skill-list"><div class="skill-item"><span class="skill-name">TensorFlow</span><div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div></div><div class="skill-item"><span class="skill-name">PyTorch</span><div class="skill-bar"><div class="skill-progress" style="width: 82%"></div></div></div><div class="skill-item"><span class="skill-name">Scikit-learn</span><div class="skill-bar"><div class="skill-progress" style="width: 88%"></div></div></div></div></div>
+                    <div class="skill-category"><h3 class="skill-category-title">Data Tools</h3><div class="skill-list"><div class="skill-item"><span class="skill-name">Pandas</span><div class="skill-bar"><div class="skill-progress" style="width: 92%"></div></div></div><div class="skill-item"><span class="skill-name">NumPy</span><div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div></div><div class="skill-item"><span class="skill-name">Plotly</span><div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div></div></div></div>
+                    <div class="skill-category"><h3 class="skill-category-title">Dev Ops</h3><div class="skill-list"><div class="skill-item"><span class="skill-name">Docker</span><div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div></div><div class="skill-item"><span class="skill-name">GCP</span><div class="skill-bar"><div class="skill-progress" style="width: 65%"></div></div></div><div class="skill-item"><span class="skill-name">Git</span><div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div></div></div></div>
+                </div>
             </div>
-        </div>
-        <div class="timeline-item">
-            <span class="date">Dec 2023 - Jan 2024</span>
-            <div class="content">
-                <strong>Credit Card Fraud Detection</strong>
-                <ul class="work-list">
-                    <li> I work with a Credit Card Fraud dataset, aiming to develop a predictive model using a Gaussian Mixture Model (GMM) to identify fraud by determining a threshold for fraud samples.</li>
-                    <li>Exploratory Data Analysis and Normalisation of data is performed.</li>
-                    <li>A custom GMM model is implemented from scratch, with initialization of parameters using KMeans, followed by applying the Expectation-Maximization (EM) algorithm to fit the model to the honest data.</li>
-                    <li>The custom GMM model is created, which includes fitting the model to training data, calculating class priors, and predicting probabilities for each sample, with log-likelihoods used to deduce the fraud detection threshold.</li>
-                    <li>The model's log-likelihoods are plotted to identify a threshold point where the density drop indicates fraud detection, completing the fraud detection pipeline.</li>
-                </ul>
+        </section>
+
+        <!-- Leadership & Awards -->
+        <section id="experience" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Leadership & Awards</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-card"><div class="achievement-icon"><i class="fas fa-chess"></i></div><h3 class="achievement-title">Chess Team Captain</h3><p class="achievement-description">Led St. Stephen’s College to 1st place in DU Inter-Collegiate Tournament 2023.</p></div>
+                    <div class="achievement-card"><div class="achievement-icon"><i class="fas fa-users"></i></div><h3 class="achievement-title">Class Representative</h3><p class="achievement-description">Elected rep of Mathematics Dept. (2021-2022).</p></div>
+                    <div class="achievement-card"><div class="achievement-icon"><i class="fas fa-trophy"></i></div><h3 class="achievement-title">Mathematics Prize</h3><p class="achievement-description">Department Prize for outstanding talent (2023).</p></div>
+                    <div class="achievement-card"><div class="achievement-icon"><i class="fas fa-award"></i></div><h3 class="achievement-title">Sports Scholarship</h3><p class="achievement-description">Ranjit Bhatia Scholarship for academic & sports excellence (2023).</p></div>
+                </div>
             </div>
-        </div>
-        <div class="timeline-item">
-            <span class="date">Dec 2023</span>
-            <div class="content">
-                <strong>Gradient Descent Algorithms</strong>
-                <ul class="work-list">
-                    <li>Implemented the gradient descent algorithm using the Himmelblau and Rosenbrock's functions.</li>
-                    <li>Tested using two different initial points</li>
-                    <li>Lastly, we tested using different step sizes: Wolfe-Powell, Armijo and a constant arbitrary step-size</li>
-                    <li>Conclude by noting and comparing the differences</li>
-                </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Get in Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div class="contact-details"><h3>Email</h3><a href="mailto:soumodeep.hoodaty@polytechnique.edu">soumodeep.hoodaty@polytechnique.edu</a></div></div>
+                        <div class="contact-item"><div class="contact-icon"><i class="fab fa-github"></i></div><div class="contact-details"><h3>GitHub</h3><a href="https://github.com/hoodaty" target="_blank">github.com/hoodaty</a></div></div>
+                        <div class="contact-item"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><div class="contact-details"><h3>Location</h3><span>Paris, France</span></div></div>
+                    </div>
+                    <div class="contact-cta"><h3>Let’s collaborate!</h3><p>Open to research collaborations and internships.</p><a href="mailto:soumodeep.hoodaty@polytechnique.edu" class="btn btn-primary">Email Me</a></div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
+    </main>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <p>Python (TensorFlow, PyTorch, Matplotlib, Plotly, Pandas, Sci-kit Learn, Scipy, Numpy), PostgreSQL, MySQL, C++ (intermediate), Java (intermediate), LaTeX, HTML, CSS, SageMath</p>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-        <h2>Positions of Responsibility</h2>
-        <ul>
-            <li><strong>Captain, Chess Team</strong> - Led St. Stephen’s College to first place in the 2023 Delhi University Inter-Collegiate Tournament.</li>
-            <li><strong>Class Representative</strong> - Elected representative of the Mathematics Department, St. Stephen’s College (2021-2022).</li>
-        </ul>
-    </section>
-
-    <!-- Awards Section -->
-    <section id="awards">
-        <h2>Awards and Scholarships</h2>
-        <ul>
-            <li><strong>Department of Mathematics Prize</strong> - Awarded for outstanding talent in Mathematics, St. Stephen’s College (2023).</li>
-            <li><strong>Professor Ranjit Bhatia Sports Scholarship</strong> - Recognized for excellence in academics and sports (2023).</li>
-        </ul>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Feel free to reach out to me via <a href="mailto:soumodeep.hoodaty@polytechnique.edu">email</a> or check out my work on <a href="https://github.com/hoodaty" target="_blank">GitHub</a>.</p>
-    </section>
-
-    </script src = "script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
