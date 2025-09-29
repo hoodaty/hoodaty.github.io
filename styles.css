@@ -473,7 +473,7 @@ body {
     margin-top: var(--space-2);
 }
 
-/* Timeline */
+/* Timeline - FIXED: Hide bullet points behind cards */
 .timeline {
     position: relative;
     padding-left: var(--space-8);
@@ -487,6 +487,7 @@ body {
     bottom: 0;
     width: 2px;
     background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+    z-index: 1; /* Make sure timeline line is below cards */
 }
 
 .timeline-item {
@@ -504,10 +505,12 @@ body {
     border: 3px solid var(--white);
     border-radius: var(--radius-full);
     box-shadow: var(--shadow-md);
+    z-index: 2; /* Marker above timeline but below card */
 }
 
 .timeline-content {
     position: relative;
+    z-index: 3; /* Cards are on top */
 }
 
 .timeline-date {
@@ -527,6 +530,8 @@ body {
     box-shadow: var(--shadow-md);
     transition: all var(--transition-normal);
     border: 1px solid var(--gray-200);
+    position: relative; /* Ensure cards stay on top */
+    z-index: 4; /* Above everything else in timeline */
 }
 
 .card:hover {
@@ -670,8 +675,8 @@ body {
 .tech-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-3);
-    margin-top: var(--space-3);
+    gap: var(--space-2);
+    margin-top: var(--space-4);
 }
 
 .tech-tag {
@@ -746,6 +751,7 @@ body {
 .project-details ul {
     list-style: none;
     padding: 0;
+    margin-bottom: var(--space-4); /* Add margin to create space above tech tags */
 }
 
 .project-details li {
@@ -762,6 +768,15 @@ body {
     left: 0;
     color: var(--success-color);
     font-weight: bold;
+}
+
+/* FIXED: Better alignment for project tech tags */
+.project-card .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin: 0 var(--space-6) var(--space-6); /* Consistent margin like internship cards */
+    padding-top: var(--space-2); /* Small padding for visual separation */
 }
 
 /* Skills Section */
