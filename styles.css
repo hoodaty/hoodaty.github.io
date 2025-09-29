@@ -520,6 +520,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: var(--space-2);
+    list-style: none;
 }
 
 /* Cards */
