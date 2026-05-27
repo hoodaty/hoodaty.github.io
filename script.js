@@ -164,14 +164,6 @@ function initializeScrollAnimations() {
     function updateScrollEffects() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-        // Navbar background opacity
-        if (scrollTop > 50) {
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.backdropFilter = 'blur(10px)';
-        } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.9)';
-        }
-
         // Hide/show navbar on scroll direction (optional)
         if (scrollTop > lastScrollTop && scrollTop > 200) {
             // Scrolling down
