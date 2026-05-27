@@ -1301,17 +1301,14 @@ body {
     border-left-color: var(--gray-300);
 }
 
-/* Hide the weird vertical timeline line */
-.timeline::before {
-    display: none !important;
+/* Force hide timeline graphics and fix alignment */
+.timeline::before, 
+.timeline-marker { 
+    display: none !important; 
+    opacity: 0 !important;
+    visibility: hidden !important;
 }
 
-/* Hide the blue circular markers (the "bullet points") */
-.timeline-marker {
-    display: none !important;
-}
-
-/* Fix the indentation so the dates and cards align properly to the left */
-.timeline {
-    padding-left: 0 !important;
+.timeline { 
+    padding-left: 0 !important; 
 }
